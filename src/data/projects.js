@@ -53,9 +53,7 @@ export const projects = [
         mainVideo: softSpaVideo,
         previewVideo: softSpaVideo,
         gallery: [
-            softSpaStyleSheet1,
-            softSpaStyleSheet2,
-            softSpaStyleSheet3,
+            [softSpaStyleSheet1, softSpaStyleSheet2, softSpaStyleSheet3], // Carousel for style sheets
             softSpaBidet,
             softSpaFabric1,
             softSpaFabric2,
