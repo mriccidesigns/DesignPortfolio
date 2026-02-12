@@ -1,0 +1,113 @@
+.carouselWrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    background-color: var(--color-bg-alt);
+}
+
+.imageContainer {
+    width: 100%;
+    overflow: hidden;
+    /* Hide overflow */
+    position: relative;
+    border-radius: 12px;
+}
+
+.track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.slide {
+    min-width: 100%;
+    /* Each slide takes full width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carouselImage {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    object-fit: contain;
+    display: block;
+}
+
+.navBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    z-index: 10;
+    color: var(--color-text-main);
+    box-shadow: var(--shadow-sm);
+}
+
+.navBtn:hover {
+    background-color: white;
+    box-shadow: var(--shadow-md);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prevBtn {
+    left: var(--spacing-md);
+}
+
+.nextBtn {
+    right: var(--spacing-md);
+}
+
+.indicators {
+    position: absolute;
+    bottom: var(--spacing-md);
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: var(--spacing-xs);
+    z-index: 10;
+}
+
+.indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.indicator.active {
+    background-color: white;
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .navBtn {
+        width: 32px;
+        height: 32px;
+        font-size: 0.8rem;
+    }
+
+    .prevBtn {
+        left: var(--spacing-sm);
+    }
+
+    .nextBtn {
+        right: var(--spacing-sm);
+    }
+}

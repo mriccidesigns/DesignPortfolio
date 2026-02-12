@@ -1,0 +1,96 @@
+:root {
+    /* Professional Blue & Grey Palette */
+    --color-primary: #0047AB;
+    /* Cobalt Blue */
+    --color-primary-dark: #003380;
+    --color-secondary: #4A4A4A;
+    /* Dark Grey */
+    --color-secondary-dark: #333333;
+    --color-tertiary: #E0E0E0;
+    /* Light Grey */
+
+    /* Clean Solid Backgrounds & Borders */
+    --bg-solid-blue: #0047AB;
+    --bg-solid-grey: #4A4A4A;
+    --bg-light-grey: #F5F5F5;
+
+    /* Removed Pink/Purple Gradients */
+    --gradient-hero: #0047AB;
+    /* Switched to solid blue as requested */
+    --gradient-subtle: rgba(0, 71, 171, 0.05);
+
+    /* Accent Colors - Blue tones */
+    --color-accent: #007AFF;
+    /* Bright Blue */
+    --color-accent-light: #5AC8FA;
+    --color-accent-subtle: #E1F5FE;
+
+    --color-background: #ffffff;
+    --color-surface: #ffffff;
+    --color-surface-hover: #F8F9FA;
+
+    --color-text-main: #000000;
+    --color-text-light: #4A4A4A;
+    --color-text-inverse: #ffffff;
+
+    --color-border: #D1D1D1;
+
+    /* Enhanced Spacing - More generous whitespace */
+    --spacing-xs: 0.75rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2.5rem;
+    --spacing-xl: 3.5rem;
+    --spacing-xxl: 6rem;
+    --spacing-section: 8rem;
+
+    /* Typography - Bold & Impactful */
+    --font-family-main: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-family-display: 'Bebas Neue', 'Oswald', 'Impact', sans-serif;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+    --font-weight-black: 900;
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Enhanced Shadows */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.12);
+    --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family-main);
+    color: var(--color-text-main);
+    background-color: var(--color-background);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    background: none;
+}

@@ -1,0 +1,88 @@
+import styles from './About.module.css';
+import { SiBlender, SiAdobephotoshop, SiAdobeillustrator, SiAdobeindesign, SiAdobeaftereffects, SiAdobepremierepro, SiAdobelightroom, SiFigma } from "react-icons/si";
+
+// Profile image from assets
+import profileImage from '../assets/projects/Matt_Grad_Photo-9.jpg';
+
+const About = () => {
+    return (
+        <div className={styles.about}>
+            <div className={styles.container}>
+                <div className={styles.imageColumn}>
+                    <div className={styles.stickyWrapper}>
+                        <div className={styles.imageWrapper}>
+                            <img src={profileImage} alt="Matthew Ricci" className={styles.profileImage} />
+                        </div>
+                    </div>
+                </div>
+
+                <div className={styles.contentColumn}>
+                    <header className={styles.header}>
+                        <h1 className={styles.title}>About Me</h1>
+                        <h2 className={styles.subtitle}>Senior Graphic Designer</h2>
+                    </header>
+
+                    <div className={styles.bio}>
+                        <p>
+                            I am a detail-oriented Senior In-House Graphic Designer and 3D artist with a proven track record of delivering impactful design solutions across diverse departments.
+                            My approach combines technical precision with a deep understanding of corporate brand management and internal communications.
+                        </p>
+                        <p>
+                            With years of experience working within corporate environments, I specialize in streamlining design workflows and maintaining absolute brand consistency while pushing the boundaries of visual storytelling.
+                        </p>
+                    </div>
+
+                    <div className={styles.softwareSection}>
+                        <h3 className={styles.sectionHeader}>Software Mastery</h3>
+                        <div className={styles.softwareGrid}>
+                            {/* Row 1: Core Design & Layout (Adobe + Figma) */}
+                            <div className={styles.softwareIcon} title="Adobe Photoshop">
+                                <SiAdobephotoshop />
+                            </div>
+                            <div className={styles.softwareIcon} title="Adobe Illustrator">
+                                <SiAdobeillustrator />
+                            </div>
+                            <div className={styles.softwareIcon} title="Adobe InDesign">
+                                <SiAdobeindesign />
+                            </div>
+                            <div className={styles.softwareIcon} title="Figma">
+                                <SiFigma />
+                            </div>
+
+                            {/* Row 2: Video & 3D (Adobe + Blender) */}
+                            <div className={styles.softwareIcon} title="Adobe After Effects">
+                                <SiAdobeaftereffects />
+                            </div>
+                            <div className={styles.softwareIcon} title="Adobe Premiere Pro">
+                                <SiAdobepremierepro />
+                            </div>
+                            <div className={styles.softwareIcon} title="Blender / 3ds Max">
+                                <SiBlender />
+                            </div>
+                            <div className={styles.softwareIcon} title="Adobe Lightroom">
+                                <SiAdobelightroom />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className={styles.skills}>
+                        <div className={styles.skillItem}>
+                            <h3 className={styles.skillTitle}>5+ Years of Industry Experience</h3>
+                        </div>
+                        <div className={styles.skillItem}>
+                            <h3 className={styles.skillTitle}>Advanced 3D Visualization Mastery</h3>
+                        </div>
+                        <div className={styles.skillItem}>
+                            <h3 className={styles.skillTitle}>Expert Packaging & Retail Solutions</h3>
+                        </div>
+                        <div className={styles.skillItem}>
+                            <h3 className={styles.skillTitle}>Strategic Brand Leadership</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default About;
