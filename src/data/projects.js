@@ -9,6 +9,37 @@ import philanthropyStickers from '../assets/projects/digital/Philanthropy Sticke
 import philTshirt from '../assets/projects/digital/phil tshirt mock_edited.jpg';
 import badHabitsCard from '../assets/projects/digital/Bad Habits Card.png';
 
+// Soft Spa images
+import softSpaBidet from '../assets/projects/3d/soft-spa-bidet.png';
+import softSpaStyleSheet1 from '../assets/projects/digital/SoftSpa-StyleSheet-1-01.png';
+import softSpaStyleSheet2 from '../assets/projects/digital/SoftSpa-StyleSheet-1-02.png';
+import softSpaStyleSheet3 from '../assets/projects/digital/SoftSpa-StyleSheet-1-03.png';
+import softSpaFabric1 from '../assets/projects/3d/SoftSpaFabric_Ani-IS0253.png';
+import softSpaFabric2 from '../assets/projects/3d/SoftSpaFabric_Ani_OneCam-IS0597.png';
+import softSpaFabric3 from '../assets/projects/3d/SoftSpaFabric_Ani_OneCam-IS0864.png';
+import softSpaFabric4 from '../assets/projects/3d/SoftSpaFabric_Ani_OneCam-IS1360.png';
+
+// 3D Environment images
+import alienObjectHero from '../assets/projects/3d/alien-object/hero.png';
+import cubeHero from '../assets/projects/3d/cube/hero.png';
+import cubeRender1 from '../assets/projects/3d/cube/render-1.png';
+import swordHero from '../assets/projects/3d/sword-in-stone/hero.png';
+import swordRender1 from '../assets/projects/3d/sword-in-stone/render-1.png';
+import swordRender2 from '../assets/projects/3d/sword-in-stone/render-2.png';
+import swordRender3 from '../assets/projects/3d/sword-in-stone/render-3.png';
+import triangleHallway from '../assets/projects/3d/triangle-hallway/hero.png';
+
+// Bad Habits Wine images
+import badHabitsMock from '../assets/projects/digital/Bad Habits Mock.png';
+
+// Branding Collection images
+import brunoParadigmEdited from '../assets/projects/digital/Bruno Paradigm Mockup_edited.jpg';
+import brunoParadigm from '../assets/projects/digital/Bruno Paradigm Mockup.png';
+import oasisMock from '../assets/projects/digital/Oasis digital mock.png';
+import sidelineBanterCover from '../assets/projects/digital/Side Line Banter Mock cover.png';
+import sidelineBanterMock from '../assets/projects/digital/Side Line Banter Mock.png';
+import sidelineBanterPhone from '../assets/projects/digital/sideline banter phone mock.png';
+
 export const projects = [
     {
         id: 'soft-spa-rebrand',
@@ -18,23 +49,18 @@ export const projects = [
         projectDetails: "The Soft Spa Bidet required a comprehensive rebrand to elevate its market presence. This project encompassed a complete visual identity update and the creation of a promotional unboxing video designed to clearly demonstrate value and drive sales.",
         goals: "Establish a premium brand identity and increase product sales through engaging, high-fidelity video content and cohesive visual assets.",
         role: "Led the rebrand strategy and production. Created the visual identity, style guides, and produced the promotional video from concept to final edit. The rebrand contributed to an ~1800% increase in monthly sales.",
-        image: '/src/assets/projects/3d/soft-spa-bidet.png',
+        image: softSpaBidet,
         mainVideo: softSpaVideo,
         previewVideo: softSpaVideo,
         gallery: [
-            // Brand Sheets Carousel
-            [
-                '/src/assets/projects/digital/SoftSpa-StyleSheet-1-01.png',
-                '/src/assets/projects/digital/SoftSpa-StyleSheet-1-02.png',
-                '/src/assets/projects/digital/SoftSpa-StyleSheet-1-03.png'
-            ],
-            // Toilet Over Ocean - Right Aligned Grid Item
-            '/src/assets/projects/3d/soft-spa-bidet.png',
-            // Other Photography
-            '/src/assets/projects/3d/SoftSpaFabric_Ani-IS0253.png',
-            '/src/assets/projects/3d/SoftSpaFabric_Ani_OneCam-IS0597.png',
-            '/src/assets/projects/3d/SoftSpaFabric_Ani_OneCam-IS0864.png',
-            '/src/assets/projects/3d/SoftSpaFabric_Ani_OneCam-IS1360.png'
+            softSpaStyleSheet1,
+            softSpaStyleSheet2,
+            softSpaStyleSheet3,
+            softSpaBidet,
+            softSpaFabric1,
+            softSpaFabric2,
+            softSpaFabric3,
+            softSpaFabric4
         ],
         featured: true
     },
@@ -63,14 +89,14 @@ export const projects = [
         image: abandonedLake,
         gallery: [
             abandonedLake,
-            '/src/assets/projects/3d/alien-object/hero.png',
-            '/src/assets/projects/3d/cube/hero.png',
-            '/src/assets/projects/3d/cube/render-1.png',
-            '/src/assets/projects/3d/sword-in-stone/hero.png',
-            '/src/assets/projects/3d/sword-in-stone/render-1.png',
-            '/src/assets/projects/3d/sword-in-stone/render-2.png',
-            '/src/assets/projects/3d/sword-in-stone/render-3.png',
-            '/src/assets/projects/3d/triangle-hallway/hero.png'
+            alienObjectHero,
+            cubeHero,
+            cubeRender1,
+            swordHero,
+            swordRender1,
+            swordRender2,
+            swordRender3,
+            triangleHallway
         ],
         featured: false
     },
@@ -85,7 +111,7 @@ export const projects = [
         image: badHabitsCard,
         gallery: [
             badHabitsCard,
-            '/src/assets/projects/digital/Bad Habits Mock.png'
+            badHabitsMock
         ],
         featured: true
     },
@@ -97,15 +123,15 @@ export const projects = [
         projectDetails: "This collection features various branding and identity projects. 'Bruno Paradigm' explores modern minimalist aesthetics. 'Oasis' focuses on refreshing and vibrant visual language. 'Sideline Banter' creates a dynamic sports-oriented identity.",
         goals: "To create distinct and effective visual identities for diverse clients and industries.",
         role: "Lead Designer for all brand identities.",
-        image: '/src/assets/projects/digital/Bruno Paradigm Mockup_edited.jpg',
+        image: brunoParadigmEdited,
         gallery: [
-            '/src/assets/projects/digital/Bruno Paradigm Mockup_edited.jpg',
-            '/src/assets/projects/digital/Bruno Paradigm Mockup.png',
-            '/src/assets/projects/digital/Oasis digital mock.png',
-            '/src/assets/projects/digital/Side Line Banter Mock cover.png',
+            brunoParadigmEdited,
+            brunoParadigm,
+            oasisMock,
+            sidelineBanterCover,
             sidelineBanterApp,
-            '/src/assets/projects/digital/Side Line Banter Mock.png',
-            '/src/assets/projects/digital/sideline banter phone mock.png'
+            sidelineBanterMock,
+            sidelineBanterPhone
         ],
         featured: false
     }
