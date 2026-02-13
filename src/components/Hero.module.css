@@ -10,7 +10,7 @@
     background-color: var(--bg-light-grey);
 }
 
-/* Dark overlay for better text readability over masonry background */
+/* Subtle overlay for slight text contrast over masonry background */
 .hero::before {
     content: '';
     position: absolute;
@@ -19,9 +19,9 @@
     right: 0;
     bottom: 0;
     background: linear-gradient(135deg,
-            rgba(0, 0, 0, 0.5) 0%,
-            rgba(0, 0, 0, 0.3) 50%,
-            rgba(0, 0, 0, 0.5) 100%);
+            rgba(0, 0, 0, 0.15) 0%,
+            rgba(0, 0, 0, 0.10) 50%,
+            rgba(0, 0, 0, 0.15) 100%);
     z-index: 0;
     pointer-events: none;
 }
