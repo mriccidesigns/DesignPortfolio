@@ -24,12 +24,12 @@ const About = () => {
                             <div className={styles.skillText}>Visualization Mastery</div>
                         </div>
                         <div className={styles.skillItem}>
-                            <div className={styles.skillNumber}>PKG</div>
-                            <div className={styles.skillText}>Packaging & Retail</div>
+                            <div className={styles.skillNumber}>📦</div>
+                            <div className={styles.skillText}>Packaging Design</div>
                         </div>
                         <div className={styles.skillItem}>
                             <div className={styles.skillNumber}>★</div>
-                            <div className={styles.skillText}>Brand Leadership</div>
+                            <div className={styles.skillText}>Project Management</div>
                         </div>
                     </div>
                 </div>
