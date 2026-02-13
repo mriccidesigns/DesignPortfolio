@@ -9,9 +9,27 @@ const About = () => {
         <div className={styles.about}>
             <div className={styles.container}>
                 <div className={styles.imageColumn}>
-                    <div className={styles.stickyWrapper}>
-                        <div className={styles.imageWrapper}>
-                            <img src={profileImage} alt="Matthew Ricci" className={styles.profileImage} />
+                    <div className={styles.imageWrapper}>
+                        <img src={profileImage} alt="Matthew Ricci" className={styles.profileImage} />
+                    </div>
+
+                    {/* Skills next to the profile picture */}
+                    <div className={styles.skills}>
+                        <div className={styles.skillItem}>
+                            <div className={styles.skillNumber}>5+</div>
+                            <div className={styles.skillText}>Years of Experience</div>
+                        </div>
+                        <div className={styles.skillItem}>
+                            <div className={styles.skillNumber}>3D</div>
+                            <div className={styles.skillText}>Visualization Mastery</div>
+                        </div>
+                        <div className={styles.skillItem}>
+                            <div className={styles.skillNumber}>PKG</div>
+                            <div className={styles.skillText}>Packaging & Retail</div>
+                        </div>
+                        <div className={styles.skillItem}>
+                            <div className={styles.skillNumber}>★</div>
+                            <div className={styles.skillText}>Brand Leadership</div>
                         </div>
                     </div>
                 </div>
@@ -32,83 +50,60 @@ const About = () => {
                         </p>
                     </div>
 
-                    {/* Skills and Software horizontally aligned */}
-                    <div className={styles.skillsSoftwareContainer}>
-                        {/* Skills on the left */}
-                        <div className={styles.skills}>
-                            <div className={styles.skillItem}>
-                                <div className={styles.skillNumber}>5+</div>
-                                <div className={styles.skillText}>Years of Experience</div>
+                    {/* Software section on the right, aligned with skills */}
+                    <div className={styles.softwareSection}>
+                        <h3 className={styles.sectionHeader}>Software Mastery</h3>
+                        <div className={styles.softwareGrid}>
+                            {/* Row 1: Core Design & Layout (Adobe + Figma) */}
+                            <div className={styles.softwareIconWrapper}>
+                                <div className={styles.softwareIcon} title="Adobe Photoshop">
+                                    <SiAdobephotoshop />
+                                </div>
+                                <span className={styles.softwareLabel}>Photoshop</span>
                             </div>
-                            <div className={styles.skillItem}>
-                                <div className={styles.skillNumber}>3D</div>
-                                <div className={styles.skillText}>Visualization Mastery</div>
+                            <div className={styles.softwareIconWrapper}>
+                                <div className={styles.softwareIcon} title="Adobe Illustrator">
+                                    <SiAdobeillustrator />
+                                </div>
+                                <span className={styles.softwareLabel}>Illustrator</span>
                             </div>
-                            <div className={styles.skillItem}>
-                                <div className={styles.skillNumber}>PKG</div>
-                                <div className={styles.skillText}>Packaging & Retail</div>
+                            <div className={styles.softwareIconWrapper}>
+                                <div className={styles.softwareIcon} title="Adobe InDesign">
+                                    <SiAdobeindesign />
+                                </div>
+                                <span className={styles.softwareLabel}>InDesign</span>
                             </div>
-                            <div className={styles.skillItem}>
-                                <div className={styles.skillNumber}>★</div>
-                                <div className={styles.skillText}>Brand Leadership</div>
+                            <div className={styles.softwareIconWrapper}>
+                                <div className={styles.softwareIcon} title="Figma">
+                                    <SiFigma />
+                                </div>
+                                <span className={styles.softwareLabel}>Figma</span>
                             </div>
-                        </div>
 
-                        {/* Software on the right */}
-                        <div className={styles.softwareSection}>
-                            <h3 className={styles.sectionHeader}>Software Mastery</h3>
-                            <div className={styles.softwareGrid}>
-                                {/* Row 1: Core Design & Layout (Adobe + Figma) */}
-                                <div className={styles.softwareIconWrapper}>
-                                    <div className={styles.softwareIcon} title="Adobe Photoshop">
-                                        <SiAdobephotoshop />
-                                    </div>
-                                    <span className={styles.softwareLabel}>Photoshop</span>
+                            {/* Row 2: Video & 3D (Adobe + Blender) */}
+                            <div className={styles.softwareIconWrapper}>
+                                <div className={styles.softwareIcon} title="Adobe After Effects">
+                                    <SiAdobeaftereffects />
                                 </div>
-                                <div className={styles.softwareIconWrapper}>
-                                    <div className={styles.softwareIcon} title="Adobe Illustrator">
-                                        <SiAdobeillustrator />
-                                    </div>
-                                    <span className={styles.softwareLabel}>Illustrator</span>
+                                <span className={styles.softwareLabel}>After Effects</span>
+                            </div>
+                            <div className={styles.softwareIconWrapper}>
+                                <div className={styles.softwareIcon} title="Adobe Premiere Pro">
+                                    <SiAdobepremierepro />
                                 </div>
-                                <div className={styles.softwareIconWrapper}>
-                                    <div className={styles.softwareIcon} title="Adobe InDesign">
-                                        <SiAdobeindesign />
-                                    </div>
-                                    <span className={styles.softwareLabel}>InDesign</span>
+                                <span className={styles.softwareLabel}>Premiere Pro</span>
+                            </div>
+                            <div className={styles.softwareIconWrapper}>
+                                <div className={styles.softwareIcon} title="Blender / 3ds Max">
+                                    <SiBlender />
                                 </div>
-                                <div className={styles.softwareIconWrapper}>
-                                    <div className={styles.softwareIcon} title="Figma">
-                                        <SiFigma />
-                                    </div>
-                                    <span className={styles.softwareLabel}>Figma</span>
+                                <span className={styles.softwareLabel}>Blender</span>
+                            </div>
+                            <div className={styles.softwareIconWrapper}>
+                                <div className={styles.softwareIcon} title="Adobe Lightroom">
+                                    <SiAdobelightroom />
                                 </div>
-
-                                {/* Row 2: Video & 3D (Adobe + Blender) */}
-                                <div className={styles.softwareIconWrapper}>
-                                    <div className={styles.softwareIcon} title="Adobe After Effects">
-                                        <SiAdobeaftereffects />
-                                    </div>
-                                    <span className={styles.softwareLabel}>After Effects</span>
-                                </div>
-                                <div className={styles.softwareIconWrapper}>
-                                    <div className={styles.softwareIcon} title="Adobe Premiere Pro">
-                                        <SiAdobepremierepro />
-                                    </div>
-                                    <span className={styles.softwareLabel}>Premiere Pro</span>
-                                </div>
-                                <div className={styles.softwareIconWrapper}>
-                                    <div className={styles.softwareIcon} title="Blender / 3ds Max">
-                                        <SiBlender />
-                                    </div>
-                                    <span className={styles.softwareLabel}>Blender</span>
-                                </div>
-                                <div className={styles.softwareIconWrapper}>
-                                    <div className={styles.softwareIcon} title="Adobe Lightroom">
-                                        <SiAdobelightroom />
-                                    </div>
-                                    <span className={styles.softwareLabel}>Lightroom</span>
-                                </div>
+                                <span className={styles.softwareLabel}>Lightroom</span>
                             </div>
                         </div>
                     </div>

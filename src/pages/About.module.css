@@ -19,6 +19,10 @@
 }
 
 .imageColumn {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    align-items: center;
     width: 100%;
 }
 
@@ -135,16 +139,7 @@
 }
 
 .softwareSection {
-    flex: 1;
-}
-
-/* Horizontal container for skills and software */
-.skillsSoftwareContainer {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: var(--spacing-xxl);
     margin-top: var(--spacing-xl);
-    align-items: start;
 }
 
 .sectionHeader {
@@ -160,6 +155,14 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: var(--spacing-xl);
+}
+
+/* Wrapper for icon + label */
+.imageColumn {
+    display: flex;
+    gap: var(--spacing-xl);
+    align-items: flex-start;
+    width: 100%;
 }
 
 /* Wrapper for icon + label */
@@ -198,7 +201,7 @@
     display: flex;
     flex-direction: column;
     gap: var(--spacing-lg);
-    width: 100%;
+    width: auto;
 }
 
 .skillItem {
