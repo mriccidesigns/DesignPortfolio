@@ -72,6 +72,10 @@
 .masonryMedia {
     height: 100%;
     width: auto;
+    max-height: 200px;
+    /* Limit size for faster loading */
+    max-width: 300px;
+    /* Prevent oversized images */
     object-fit: cover;
     border-radius: 8px;
     /* Drop shadow for depth */
