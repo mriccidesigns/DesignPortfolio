@@ -41,20 +41,20 @@
     }
 
     100% {
-        transform: translateX(-50%);
+        transform: translateX(-33.333%);
     }
 }
 
 /* Left-to-right scroll (rows 2 and 4) */
 .scrollLTR .masonryTrack {
     animation-name: scrollLeftToRight;
-    /* Start from -50% to create opposite direction */
-    transform: translateX(-50%);
+    /* Start from -33.333% to create opposite direction */
+    transform: translateX(-33.333%);
 }
 
 @keyframes scrollLeftToRight {
     0% {
-        transform: translateX(-50%);
+        transform: translateX(-33.333%);
     }
 
     100% {
@@ -74,6 +74,8 @@
     width: auto;
     object-fit: cover;
     border-radius: 8px;
+    /* Drop shadow for depth */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
     /* Optimize for performance */
     transform: translateZ(0);
     backface-visibility: hidden;

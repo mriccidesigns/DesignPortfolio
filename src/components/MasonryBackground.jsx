@@ -25,9 +25,9 @@ const MasonryBackground = () => {
                     className={`${styles.masonryRow} ${rowIndex % 2 === 0 ? styles.scrollRTL : styles.scrollLTR
                         }`}
                 >
-                    {/* Duplicate content for seamless infinite loop */}
+                    {/* Triplicate content for seamless infinite loop and ensure enough width */}
                     <div className={styles.masonryTrack}>
-                        {[...rowAssets, ...rowAssets].map((asset, assetIndex) => (
+                        {[...rowAssets, ...rowAssets, ...rowAssets].map((asset, assetIndex) => (
                             <div key={assetIndex} className={styles.masonryItem}>
                                 {asset.type === 'video' ? (
                                     <video
