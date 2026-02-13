@@ -1,4 +1,5 @@
 import styles from './Hero.module.css';
+import MasonryBackground from './MasonryBackground';
 
 const Hero = () => {
     const scrollToSection = (sectionId) => {
@@ -10,6 +11,7 @@ const Hero = () => {
 
     return (
         <section className={styles.hero}>
+            <MasonryBackground />
             <div className={styles.content}>
                 <h1 className={styles.title}>
                     Hi! I'm <span className={styles.highlight}>Matthew,</span> <span style={{ color: 'black' }}>A</span><br />

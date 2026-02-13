@@ -1,0 +1,101 @@
+.masonryBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    opacity: 0.08;
+    /* Very subtle for text readability */
+    pointer-events: none;
+    /* Don't interfere with clicks */
+}
+
+.masonryRow {
+    display: flex;
+    height: 25%;
+    /* 4 rows = 25% each */
+    overflow: hidden;
+    position: relative;
+}
+
+.masonryTrack {
+    display: flex;
+    gap: 16px;
+    animation-duration: 80s;
+    /* Slower for smoother effect */
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    will-change: transform;
+}
+
+/* Right-to-left scroll (rows 1 and 3) */
+.scrollRTL .masonryTrack {
+    animation-name: scrollRightToLeft;
+}
+
+@keyframes scrollRightToLeft {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Left-to-right scroll (rows 2 and 4) */
+.scrollLTR .masonryTrack {
+    animation-name: scrollLeftToRight;
+    /* Start from -50% to create opposite direction */
+    transform: translateX(-50%);
+}
+
+@keyframes scrollLeftToRight {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.masonryItem {
+    flex-shrink: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.masonryMedia {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    /* Optimize for performance */
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .masonryBackground {
+        opacity: 0.05;
+        /* Even more subtle on mobile */
+    }
+
+    .masonryTrack {
+        gap: 12px;
+        animation-duration: 60s;
+        /* Faster on mobile */
+    }
+}
+
+/* Pause animation on reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    .masonryTrack {
+        animation: none;
+    }
+}
