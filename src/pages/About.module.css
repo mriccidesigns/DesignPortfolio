@@ -63,6 +63,14 @@
     text-align: left;
 }
 
+.skillNumber {
+    font-size: 5rem;
+    font-weight: var(--font-weight-black);
+    color: var(--color-primary);
+    line-height: 1;
+    margin: 0;
+}
+
 .title {
     font-family: var(--font-family-display);
     font-size: clamp(3rem, 6vw, 5rem);
@@ -199,6 +207,7 @@
     gap: var(--spacing-lg);
     width: 100%;
     max-width: 500px;
+    margin-top: var(--spacing-xxl);
 }
 
 .skillItem {
