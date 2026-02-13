@@ -256,8 +256,12 @@
         gap: var(--spacing-xl);
     }
 
-    .skillTitle {
-        font-size: 1.5rem;
+    .skillNumber {
+        font-size: 3rem;
+    }
+
+    .skillText {
+        font-size: 0.9rem;
     }
 
     .softwareGrid {

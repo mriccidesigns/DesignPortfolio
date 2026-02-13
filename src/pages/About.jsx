@@ -37,16 +37,20 @@ const About = () => {
                         {/* Skills on the left */}
                         <div className={styles.skills}>
                             <div className={styles.skillItem}>
-                                <h3 className={styles.skillTitle}>5+ Years of Industry Experience</h3>
+                                <div className={styles.skillNumber}>5+</div>
+                                <div className={styles.skillText}>Years of Experience</div>
                             </div>
                             <div className={styles.skillItem}>
-                                <h3 className={styles.skillTitle}>Advanced 3D Visualization Mastery</h3>
+                                <div className={styles.skillNumber}>3D</div>
+                                <div className={styles.skillText}>Visualization Mastery</div>
                             </div>
                             <div className={styles.skillItem}>
-                                <h3 className={styles.skillTitle}>Expert Packaging & Retail Solutions</h3>
+                                <div className={styles.skillNumber}>PKG</div>
+                                <div className={styles.skillText}>Packaging & Retail</div>
                             </div>
                             <div className={styles.skillItem}>
-                                <h3 className={styles.skillTitle}>Strategic Brand Leadership</h3>
+                                <div className={styles.skillNumber}>★</div>
+                                <div className={styles.skillText}>Brand Leadership</div>
                             </div>
                         </div>
 
