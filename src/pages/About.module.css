@@ -138,10 +138,6 @@
     text-align: center;
 }
 
-.softwareSection {
-    margin-top: var(--spacing-xl);
-}
-
 .sectionHeader {
     font-family: var(--font-family-display);
     font-size: 1.8rem;
@@ -198,10 +194,11 @@
 }
 
 .skills {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-lg);
-    width: auto;
+    width: 100%;
+    max-width: 500px;
 }
 
 .skillItem {
