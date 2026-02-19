@@ -7,17 +7,17 @@ import superflapperKit from '../assets/projects/packaging/SuperFlapperKit_Plasti
 import sidelineBanterApp from '../assets/projects/digital/Side Line Banter Mock app_edited.jpg';
 import philanthropyStickers from '../assets/projects/digital/Philanthropy Stickers_edited.jpg';
 import philTshirt from '../assets/projects/digital/phil tshirt mock_edited.jpg';
-import badHabitsCard from '../assets/projects/digital/Bad Habits Card.png';
+import badHabitsCard from '../assets/projects/digital/Bad Habits Card.jpg';
 
 // Soft Spa images
-import softSpaBidet from '../assets/projects/3d/soft-spa-bidet.png';
+import softSpaBidet from '../assets/projects/3d/soft-spa-bidet.jpg';
 import softSpaStyleSheet1 from '../assets/projects/digital/SoftSpa-StyleSheet-1-01.png';
 import softSpaStyleSheet2 from '../assets/projects/digital/SoftSpa-StyleSheet-1-02.png';
 import softSpaStyleSheet3 from '../assets/projects/digital/SoftSpa-StyleSheet-1-03.png';
-import softSpaFabric1 from '../assets/projects/3d/SoftSpaFabric_Ani-IS0253.png';
-import softSpaFabric2 from '../assets/projects/3d/SoftSpaFabric_Ani_OneCam-IS0597.png';
-import softSpaFabric3 from '../assets/projects/3d/SoftSpaFabric_Ani_OneCam-IS0864.png';
-import softSpaFabric4 from '../assets/projects/3d/SoftSpaFabric_Ani_OneCam-IS1360.png';
+import softSpaFabric1 from '../assets/projects/3d/SoftSpaFabric_Ani-IS0253.jpg';
+import softSpaFabric2 from '../assets/projects/3d/SoftSpa_Ani_IS0597.jpg';
+import softSpaFabric3 from '../assets/projects/3d/SoftSpa_Ani_IS0864.jpg';
+import softSpaFabric4 from '../assets/projects/3d/SoftSpa_Ani_IS1360.jpg';
 
 // 3D Environment images
 import alienObjectHero from '../assets/projects/3d/alien-object/hero.png';
@@ -27,21 +27,20 @@ import swordHero from '../assets/projects/3d/sword-in-stone/hero.png';
 import swordRender1 from '../assets/projects/3d/sword-in-stone/render-1.png';
 import swordRender2 from '../assets/projects/3d/sword-in-stone/render-2.png';
 import swordRender3 from '../assets/projects/3d/sword-in-stone/render-3.png';
-import triangleHallway from '../assets/projects/3d/triangle-hallway/hero.png';
-import cubeAnimation from '../assets/projects/3d/cube/animation-1.mp4';
-import alienObjectAnimation from '../assets/projects/3d/alien-object/animation-1.mp4';
-import triangleHallwayAnimation from '../assets/projects/3d/triangle-hallway/animation-1.mov';
+import triangleHallway from '../assets/projects/3d/triangle-hallway/TriangleHall.jpg';
+import cubeAnimation from '../assets/projects/3d/cube/Cube_Animation.mp4';
+import alienObjectAnimation from '../assets/projects/3d/alien-object/Alien_Object.mp4';
 
 // Bad Habits Wine images
-import badHabitsMock from '../assets/projects/digital/Bad Habits Mock.png';
+import badHabitsMock from '../assets/projects/digital/Bad_Habits_BrandBook.jpg';
 
 // Branding Collection images
 import brunoParadigmEdited from '../assets/projects/digital/Bruno Paradigm Mockup_edited.jpg';
-import brunoParadigm from '../assets/projects/digital/Bruno Paradigm Mockup.png';
+import brunoParadigm from '../assets/projects/digital/Bruno Paradigm Mockup_edited.jpg';
 import oasisMock from '../assets/projects/digital/Oasis digital mock.png';
-import sidelineBanterCover from '../assets/projects/digital/Side Line Banter Mock cover.png';
-import sidelineBanterMock from '../assets/projects/digital/Side Line Banter Mock.png';
-import sidelineBanterPhone from '../assets/projects/digital/sideline banter phone mock.png';
+import sidelineBanterCover from '../assets/projects/digital/SideLineBanter_BrandBook_Cover.jpg';
+import sidelineBanterMock from '../assets/projects/digital/SideLineBanter_BrandBook.jpg';
+import sidelineBanterPhone from '../assets/projects/digital/SideLineBanter_LogoPhone.jpg';
 
 export const projects = [
     {
@@ -144,15 +143,15 @@ export const projects = [
 export const masonryAssets = [
     { src: cubeAnimation, type: 'video' },
     { src: alienObjectAnimation, type: 'video' },
-    { src: triangleHallwayAnimation, type: 'video' },
     { src: cubeAnimation, type: 'video' },
     { src: alienObjectAnimation, type: 'video' },
-    { src: triangleHallwayAnimation, type: 'video' },
     { src: cubeAnimation, type: 'video' },
     { src: alienObjectAnimation, type: 'video' },
-    { src: triangleHallwayAnimation, type: 'video' },
     { src: cubeAnimation, type: 'video' },
     { src: alienObjectAnimation, type: 'video' },
-    { src: triangleHallwayAnimation, type: 'video' },
+    { src: cubeAnimation, type: 'video' },
+    { src: alienObjectAnimation, type: 'video' },
+    { src: cubeAnimation, type: 'video' },
+    { src: alienObjectAnimation, type: 'video' },
 ];
 
