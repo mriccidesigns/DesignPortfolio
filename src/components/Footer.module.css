@@ -15,9 +15,16 @@
     gap: var(--spacing-md);
 }
 
+.credit {
+    font-size: 1rem;
+    font-weight: var(--font-weight-medium);
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: 0.02em;
+}
+
 .copyright {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .socialLinks {
