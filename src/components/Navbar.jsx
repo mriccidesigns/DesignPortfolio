@@ -24,17 +24,28 @@ const Navbar = () => {
         location.pathname === '/packaging' ||
         location.pathname === '/digital-marketing';
 
+    const handleHomeClick = (e) => {
+        e.preventDefault();
+        closeMenu();
+        if (location.pathname === '/' || location.pathname === '') {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+            navigate('/');
+            setTimeout(() => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }, 50);
+        }
+    };
+
     const handleWorkClick = (e) => {
         e.preventDefault();
         closeMenu();
         if (location.pathname === '/' || location.pathname === '') {
-            // Already on home page, just scroll to the section
             const section = document.getElementById('3d-section');
             if (section) {
                 section.scrollIntoView({ behavior: 'smooth' });
             }
         } else {
-            // Navigate to home page first, then scroll after navigation
             navigate('/');
             setTimeout(() => {
                 const section = document.getElementById('3d-section');
@@ -48,14 +59,14 @@ const Navbar = () => {
     return (
         <nav className={styles.navbar}>
             <div className={styles.container}>
-                <Link to="/" className={styles.logo} onClick={() => { closeMenu(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
+                <a href="/" className={styles.logo} onClick={handleHomeClick}>
                     <img src={logo} alt="Matthew Ricci Logo" className={styles.brandLogo} />
-                </Link>
+                </a>
 
                 <div className={`${styles.navLinks} ${isMenuOpen ? styles.active : ''}`}>
-                    <Link to="/" className={isHomeActive ? styles.activeLink : styles.link} onClick={() => { closeMenu(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
+                    <a href="/" className={isHomeActive ? styles.activeLink : styles.link} onClick={handleHomeClick}>
                         Home
-                    </Link>
+                    </a>
                     <a href="#3d-section" className={isWorkActive ? styles.activeLink : styles.link} onClick={handleWorkClick}>
                         Work
                     </a>
