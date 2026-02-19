@@ -48,12 +48,12 @@ const Navbar = () => {
     return (
         <nav className={styles.navbar}>
             <div className={styles.container}>
-                <Link to="/" className={styles.logo} onClick={closeMenu}>
+                <Link to="/" className={styles.logo} onClick={() => { closeMenu(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
                     <img src={logo} alt="Matthew Ricci Logo" className={styles.brandLogo} />
                 </Link>
 
                 <div className={`${styles.navLinks} ${isMenuOpen ? styles.active : ''}`}>
-                    <Link to="/" className={isHomeActive ? styles.activeLink : styles.link} onClick={closeMenu}>
+                    <Link to="/" className={isHomeActive ? styles.activeLink : styles.link} onClick={() => { closeMenu(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
                         Home
                     </Link>
                     <a href="#3d-section" className={isWorkActive ? styles.activeLink : styles.link} onClick={handleWorkClick}>
