@@ -8,9 +8,6 @@
     z-index: 0;
     opacity: 0.08;
     pointer-events: none;
-    /* Force GPU compositing for the entire masonry layer */
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
 }
 
 .masonryRow {
@@ -23,71 +20,7 @@
 .masonryTrack {
     display: flex;
     gap: 16px;
-    /* Force GPU compositing layer */
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-perspective: 1000px;
-    perspective: 1000px;
-}
-
-/* Right-to-left scroll (rows 1 and 3) */
-.scrollRTL .masonryTrack {
-    -webkit-animation: scrollRightToLeft 80s linear infinite;
-    animation: scrollRightToLeft 80s linear infinite;
-}
-
-/* Left-to-right scroll (rows 2 and 4) */
-.scrollLTR .masonryTrack {
-    -webkit-animation: scrollLeftToRight 80s linear infinite;
-    animation: scrollLeftToRight 80s linear infinite;
-}
-
-@-webkit-keyframes scrollRightToLeft {
-    0% {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-    }
-
-    100% {
-        -webkit-transform: translate3d(-33.333%, 0, 0);
-        transform: translate3d(-33.333%, 0, 0);
-    }
-}
-
-@keyframes scrollRightToLeft {
-    0% {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-    }
-
-    100% {
-        -webkit-transform: translate3d(-33.333%, 0, 0);
-        transform: translate3d(-33.333%, 0, 0);
-    }
-}
-
-@-webkit-keyframes scrollLeftToRight {
-    0% {
-        -webkit-transform: translate3d(-33.333%, 0, 0);
-        transform: translate3d(-33.333%, 0, 0);
-    }
-
-    100% {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-    }
-}
-
-@keyframes scrollLeftToRight {
-    0% {
-        -webkit-transform: translate3d(-33.333%, 0, 0);
-        transform: translate3d(-33.333%, 0, 0);
-    }
-
-    100% {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-    }
+    will-change: transform;
 }
 
 .masonryItem {
@@ -115,22 +48,5 @@
 
     .masonryTrack {
         gap: 12px;
-    }
-
-    .scrollRTL .masonryTrack {
-        animation-duration: 60s;
-    }
-
-    .scrollLTR .masonryTrack {
-        animation-duration: 60s;
-    }
-}
-
-/* Pause animation on reduced motion preference */
-@media (prefers-reduced-motion: reduce) {
-
-    .scrollRTL .masonryTrack,
-    .scrollLTR .masonryTrack {
-        animation: none;
     }
 }

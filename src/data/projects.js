@@ -2,8 +2,8 @@
 import softSpaVideo from '../assets/projects/3d/SoftSpa_Unboxing_2.mp4';
 import superflapperVideo from '../assets/projects/3d/FM_SuperFlapper_Explode_2024_ANI.mp4';
 import abandonedLake from '../assets/projects/3d/Abandoned Lake-1_Edit.jpg';
-import superflapper from '../assets/projects/3d/SuperFlapper_PlasticUpdate_090924.png';
-import superflapperKit from '../assets/projects/packaging/SuperFlapperKit_PlasticUpdate_090924.png';
+import superflapper from '../assets/projects/packaging/SuperFlapper_PlasticUpdate_090924.jpg';
+import superflapperKit from '../assets/projects/packaging/SuperFlapperKit_PlasticUpdate_090924.jpg';
 import sidelineBanterApp from '../assets/projects/digital/Side Line Banter Mock app_edited.jpg';
 import philanthropyStickers from '../assets/projects/digital/Philanthropy Stickers_edited.jpg';
 import philTshirt from '../assets/projects/digital/phil tshirt mock_edited.jpg';

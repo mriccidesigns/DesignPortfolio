@@ -1,12 +1,11 @@
+import { useEffect, useRef } from 'react';
 import { masonryAssets } from '../data/projects';
 import styles from './MasonryBackground.module.css';
 
 const MasonryBackground = () => {
+    const trackRefs = useRef([]);
+
     // Distribute assets across 4 rows
-    // Row 1 (index 0): scrolls right-to-left
-    // Row 2 (index 1): scrolls left-to-right  
-    // Row 3 (index 2): scrolls right-to-left
-    // Row 4 (index 3): scrolls left-to-right
     const distributeToRows = (assets, numRows = 4) => {
         const rows = Array.from({ length: numRows }, () => []);
         assets.forEach((asset, index) => {
@@ -17,16 +16,53 @@ const MasonryBackground = () => {
 
     const rows = distributeToRows(masonryAssets);
 
+    useEffect(() => {
+        const speed = 0.5; // pixels per frame
+        const offsets = trackRefs.current.map(() => 0);
+        let animationId;
+
+        const animate = () => {
+            trackRefs.current.forEach((track, i) => {
+                if (!track) return;
+                const totalWidth = track.scrollWidth / 3; // We triplicated content
+                const direction = i % 2 === 0 ? -1 : 1; // Alternate directions
+
+                offsets[i] += speed * direction;
+
+                // Reset seamlessly when one-third has scrolled
+                if (direction === -1 && offsets[i] <= -totalWidth) {
+                    offsets[i] += totalWidth;
+                } else if (direction === 1 && offsets[i] >= 0) {
+                    offsets[i] -= totalWidth;
+                }
+
+                track.style.transform = `translate3d(${offsets[i]}px, 0, 0)`;
+            });
+            animationId = requestAnimationFrame(animate);
+        };
+
+        // Initialize LTR rows to start offset
+        trackRefs.current.forEach((track, i) => {
+            if (!track) return;
+            if (i % 2 === 1) {
+                const totalWidth = track.scrollWidth / 3;
+                offsets[i] = -totalWidth;
+            }
+        });
+
+        animationId = requestAnimationFrame(animate);
+
+        return () => cancelAnimationFrame(animationId);
+    }, []);
+
     return (
         <div className={styles.masonryBackground}>
             {rows.map((rowAssets, rowIndex) => (
-                <div
-                    key={rowIndex}
-                    className={`${styles.masonryRow} ${rowIndex % 2 === 0 ? styles.scrollRTL : styles.scrollLTR
-                        }`}
-                >
-                    {/* Triplicate content for seamless infinite loop and ensure enough width */}
-                    <div className={styles.masonryTrack}>
+                <div key={rowIndex} className={styles.masonryRow}>
+                    <div
+                        className={styles.masonryTrack}
+                        ref={(el) => (trackRefs.current[rowIndex] = el)}
+                    >
                         {[...rowAssets, ...rowAssets, ...rowAssets].map((asset, assetIndex) => (
                             <div key={assetIndex} className={styles.masonryItem}>
                                 {asset.type === 'video' ? (
