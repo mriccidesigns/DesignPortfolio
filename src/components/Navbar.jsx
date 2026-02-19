@@ -1,11 +1,14 @@
-import { Link, NavLink, useLocation } from 'react-router-dom';
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import styles from './Navbar.module.css';
 import { SiLinkedin, SiArtstation, SiInstagram } from "react-icons/si";
 import logo from '../assets/mr-logo.jpg';
+import resumePdf from '../assets/Matthew-Ricci-Resume-2026.pdf';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const navigate = useNavigate();
+    const location = useLocation();
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -15,33 +18,52 @@ const Navbar = () => {
         setIsMenuOpen(false);
     };
 
-    const location = useLocation();
-    const isHomeActive = location.pathname === '/';
+    const isHomeActive = location.pathname === '/' || location.pathname === '';
     const isWorkActive = location.pathname.startsWith('/project') ||
         location.pathname === '/3d-projects' ||
         location.pathname === '/packaging' ||
         location.pathname === '/digital-marketing';
+
+    const handleWorkClick = (e) => {
+        e.preventDefault();
+        closeMenu();
+        if (location.pathname === '/' || location.pathname === '') {
+            // Already on home page, just scroll to the section
+            const section = document.getElementById('3d-section');
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        } else {
+            // Navigate to home page first, then scroll after navigation
+            navigate('/');
+            setTimeout(() => {
+                const section = document.getElementById('3d-section');
+                if (section) {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 100);
+        }
+    };
 
     return (
         <nav className={styles.navbar}>
             <div className={styles.container}>
                 <Link to="/" className={styles.logo} onClick={closeMenu}>
                     <img src={logo} alt="Matthew Ricci Logo" className={styles.brandLogo} />
-                    {/* Matthew Ricci */}
                 </Link>
 
                 <div className={`${styles.navLinks} ${isMenuOpen ? styles.active : ''}`}>
                     <Link to="/" className={isHomeActive ? styles.activeLink : styles.link} onClick={closeMenu}>
                         Home
                     </Link>
-                    <Link to="/" className={isWorkActive ? styles.activeLink : styles.link} onClick={closeMenu}>
+                    <a href="#3d-section" className={isWorkActive ? styles.activeLink : styles.link} onClick={handleWorkClick}>
                         Work
-                    </Link>
+                    </a>
                     <NavLink to="/about" className={({ isActive }) => isActive ? styles.activeLink : styles.link} onClick={closeMenu}>
                         About
                     </NavLink>
-                    <a href="/Matthew Ricci Resume-2025.pdf" target="_blank" rel="noopener noreferrer" className={styles.link} onClick={closeMenu}>
-                        Resume
+                    <a href={resumePdf} target="_blank" rel="noopener noreferrer" className={styles.resumeLink} onClick={closeMenu}>
+                        RESUME
                     </a>
 
                     <div className={styles.divider}></div>
