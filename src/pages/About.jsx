@@ -22,7 +22,7 @@ const About = () => {
                         </div>
                         <div className={styles.skillItem}>
                             <div className={styles.skillNumber}>3D</div>
-                            <div className={styles.skillText}>Visualization Mastery</div>
+                            <div className={styles.skillText}>Modelling / Animation</div>
                         </div>
                         <div className={styles.skillItem}>
                             <div className={styles.skillNumber}>

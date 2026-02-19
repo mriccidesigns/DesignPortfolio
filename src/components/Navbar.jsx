@@ -62,7 +62,7 @@ const Navbar = () => {
                     <NavLink to="/about" className={({ isActive }) => isActive ? styles.activeLink : styles.link} onClick={closeMenu}>
                         About
                     </NavLink>
-                    <a href={resumePdf} target="_blank" rel="noopener noreferrer" className={styles.resumeLink} onClick={closeMenu}>
+                    <a href={resumePdf} target="_blank" rel="noopener noreferrer" className={styles.link} onClick={closeMenu}>
                         RESUME
                     </a>
 
