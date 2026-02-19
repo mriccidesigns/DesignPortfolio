@@ -204,10 +204,9 @@
 
 .skills {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--spacing-lg);
     width: 100%;
-    max-width: 500px;
     margin-top: var(--spacing-xxl);
 }
 

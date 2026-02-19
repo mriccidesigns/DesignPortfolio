@@ -16,7 +16,7 @@ const About = () => {
                     {/* Skills next to the profile picture */}
                     <div className={styles.skills}>
                         <div className={styles.skillItem}>
-                            <div className={styles.skillNumber}>5+</div>
+                            <div className={styles.skillNumber}>7+</div>
                             <div className={styles.skillText}>Years of Experience</div>
                         </div>
                         <div className={styles.skillItem}>
@@ -24,8 +24,8 @@ const About = () => {
                             <div className={styles.skillText}>Visualization Mastery</div>
                         </div>
                         <div className={styles.skillItem}>
-                            <div className={styles.skillNumber}>📦</div>
-                            <div className={styles.skillText}>Packaging Design</div>
+                            <div className={styles.skillNumber}>◎</div>
+                            <div className={styles.skillText}>UI/UX Design</div>
                         </div>
                         <div className={styles.skillItem}>
                             <div className={styles.skillNumber}>★</div>
