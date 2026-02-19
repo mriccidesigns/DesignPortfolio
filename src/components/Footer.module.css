@@ -1,6 +1,6 @@
 .footer {
-    background-color: var(--color-text-main);
-    color: var(--color-text-inverse);
+    background-color: var(--color-primary);
+    color: #ffffff;
     padding: var(--spacing-xl) var(--spacing-lg);
     margin-top: var(--spacing-section);
 }
