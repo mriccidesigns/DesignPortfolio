@@ -47,42 +47,53 @@
     transform: scale(1.03);
 }
 
-/* Skills - 4x1 row centered under the photo */
+/* Skills - 2x2 grid centered under the photo */
 .skills {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--spacing-sm);
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
     width: 100%;
     max-width: 350px;
-    margin-top: var(--spacing-xs);
+    margin-top: var(--spacing-sm);
 }
 
 .skillItem {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2px;
+    gap: var(--spacing-xs);
     text-align: center;
+    cursor: default;
+    transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.skillItem:hover {
+    transform: translateY(-4px) scale(1.05);
+}
+
+.skillItem:hover .skillNumber {
+    color: var(--color-primary-dark, #0a3d91);
 }
 
 .skillNumber {
-    font-size: 1.6rem;
+    font-size: 2.8rem;
     font-weight: var(--font-weight-bold);
     color: var(--color-primary);
     line-height: 1;
     margin: 0;
     white-space: nowrap;
+    transition: color var(--transition-fast);
 }
 
 .uiuxIcons {
     display: flex;
     align-items: center;
-    gap: 2px;
-    font-size: 1.5rem;
+    gap: 4px;
+    font-size: 2.5rem;
 }
 
 .skillText {
-    font-size: 0.65rem;
+    font-size: 0.8rem;
     font-weight: var(--font-weight-medium);
     color: var(--color-text-main);
     line-height: 1.3;
@@ -190,11 +201,12 @@
     }
 
     .skills {
+        gap: var(--spacing-md);
         max-width: 280px;
     }
 
     .skillNumber {
-        font-size: 1.4rem;
+        font-size: 2.2rem;
     }
 
     .contentColumn {
