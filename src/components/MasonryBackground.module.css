@@ -7,15 +7,12 @@
     overflow: hidden;
     z-index: 0;
     opacity: 0.08;
-    /* Very subtle for text readability */
     pointer-events: none;
-    /* Don't interfere with clicks */
 }
 
 .masonryRow {
     display: flex;
     height: 25%;
-    /* 4 rows = 25% each */
     overflow: hidden;
     position: relative;
 }
@@ -23,16 +20,18 @@
 .masonryTrack {
     display: flex;
     gap: 16px;
-    animation-duration: 80s;
-    /* Slower for smoother effect */
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
     will-change: transform;
 }
 
 /* Right-to-left scroll (rows 1 and 3) */
 .scrollRTL .masonryTrack {
-    animation-name: scrollRightToLeft;
+    animation: scrollRightToLeft 80s linear infinite;
+}
+
+/* Left-to-right scroll (rows 2 and 4) */
+.scrollLTR .masonryTrack {
+    animation: scrollLeftToRight 80s linear infinite;
+    transform: translateX(-33.333%);
 }
 
 @keyframes scrollRightToLeft {
@@ -43,13 +42,6 @@
     100% {
         transform: translateX(-33.333%);
     }
-}
-
-/* Left-to-right scroll (rows 2 and 4) */
-.scrollLTR .masonryTrack {
-    animation-name: scrollLeftToRight;
-    /* Start from -33.333% to create opposite direction */
-    transform: translateX(-33.333%);
 }
 
 @keyframes scrollLeftToRight {
@@ -73,14 +65,10 @@
     height: 100%;
     width: auto;
     max-height: 200px;
-    /* Limit size for faster loading */
     max-width: 300px;
-    /* Prevent oversized images */
     object-fit: cover;
     border-radius: 8px;
-    /* Drop shadow for depth */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
-    /* Optimize for performance */
     transform: translateZ(0);
     backface-visibility: hidden;
 }
@@ -89,19 +77,26 @@
 @media (max-width: 768px) {
     .masonryBackground {
         opacity: 0.05;
-        /* Even more subtle on mobile */
     }
 
     .masonryTrack {
         gap: 12px;
+    }
+
+    .scrollRTL .masonryTrack {
         animation-duration: 60s;
-        /* Faster on mobile */
+    }
+
+    .scrollLTR .masonryTrack {
+        animation-duration: 60s;
     }
 }
 
 /* Pause animation on reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
-    .masonryTrack {
+
+    .scrollRTL .masonryTrack,
+    .scrollLTR .masonryTrack {
         animation: none;
     }
 }
