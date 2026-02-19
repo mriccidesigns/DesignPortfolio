@@ -5,7 +5,8 @@ const Hero = () => {
     const scrollToSection = (sectionId) => {
         const element = document.getElementById(sectionId);
         if (element) {
-            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            const y = element.getBoundingClientRect().top + window.pageYOffset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
         }
     };
 

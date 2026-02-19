@@ -145,6 +145,7 @@ export const masonryAssets = [
     // 3D Animation Videos
     { src: cubeAnimation, type: 'video' },
     { src: alienObjectAnimation, type: 'video' },
+    { src: softSpaVideo, type: 'video' },
 
     // Images - 3D Work
     { src: softSpaBidet, type: 'image' },
@@ -153,6 +154,12 @@ export const masonryAssets = [
     { src: superflapperKit, type: 'image' },
     { src: swordHero, type: 'image' },
 
+    // Soft Spa Box Renders
+    { src: softSpaFabric1, type: 'image' },
+    { src: softSpaFabric2, type: 'image' },
+    { src: softSpaFabric3, type: 'image' },
+    { src: softSpaFabric4, type: 'image' },
+
     // Images - Digital/Branding
     { src: brunoParadigmEdited, type: 'image' },
     { src: badHabitsCard, type: 'image' },
@@ -160,7 +167,6 @@ export const masonryAssets = [
     { src: sidelineBanterCover, type: 'image' },
     { src: sidelineBanterApp, type: 'image' },
     { src: philanthropyStickers, type: 'image' },
-    { src: philTshirt, type: 'image' },
 ];
 
 // Triangle hallway only appears in one row
