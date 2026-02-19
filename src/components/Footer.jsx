@@ -5,8 +5,10 @@ const Footer = () => {
     return (
         <footer className={styles.footer}>
             <div className={styles.container}>
-                <p className={styles.credit}>Designed &amp; Developed by Matthew Ricci</p>
-                <p className={styles.copyright}>&copy; {new Date().getFullYear()} Matthew Ricci. All rights reserved.</p>
+                <div className={styles.textBlock}>
+                    <p className={styles.credit}>Designed and Developed by Me</p>
+                    <p className={styles.copyright}>&copy; {new Date().getFullYear()} Matthew Ricci. All rights reserved.</p>
+                </div>
                 <div className={styles.socialLinks}>
                     <a href="https://www.linkedin.com/in/matthew-ricci10/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} title="LinkedIn">
                         <SiLinkedin />

@@ -9,10 +9,13 @@
     max-width: 1400px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
     gap: var(--spacing-md);
+}
+
+.textBlock {
+    text-align: center;
 }
 
 .credit {
