@@ -17,7 +17,7 @@ const MasonryBackground = () => {
     const rows = distributeToRows(masonryAssets);
 
     useEffect(() => {
-        const speed = 0.5; // pixels per frame
+        const speed = 0.25; // pixels per frame (slower for subtlety)
         const offsets = trackRefs.current.map(() => 0);
         let animationId;
 

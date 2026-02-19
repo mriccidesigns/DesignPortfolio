@@ -28,6 +28,9 @@ import swordRender1 from '../assets/projects/3d/sword-in-stone/render-1.png';
 import swordRender2 from '../assets/projects/3d/sword-in-stone/render-2.png';
 import swordRender3 from '../assets/projects/3d/sword-in-stone/render-3.png';
 import triangleHallway from '../assets/projects/3d/triangle-hallway/hero.png';
+import cubeAnimation from '../assets/projects/3d/cube/animation-1.mp4';
+import alienObjectAnimation from '../assets/projects/3d/alien-object/animation-1.mp4';
+import triangleHallwayAnimation from '../assets/projects/3d/triangle-hallway/animation-1.mov';
 
 // Bad Habits Wine images
 import badHabitsMock from '../assets/projects/digital/Bad Habits Mock.png';
@@ -139,32 +142,17 @@ export const projects = [
 // Easy to update: just add/remove items from this array
 // Mix of images and videos for dynamic background effect
 export const masonryAssets = [
-    // Videos
-    { src: softSpaVideo, type: 'video' },
-    { src: superflapperVideo, type: 'video' },
-
-    // Images - 3D Work
-    { src: softSpaBidet, type: 'image' },
-    { src: abandonedLake, type: 'image' },
-    { src: superflapper, type: 'image' },
-    { src: superflapperKit, type: 'image' },
-    { src: alienObjectHero, type: 'image' },
-    { src: cubeHero, type: 'image' },
-    { src: swordHero, type: 'image' },
-    { src: triangleHallway, type: 'image' },
-
-    // Images - Digital/Branding
-    { src: brunoParadigmEdited, type: 'image' },
-    { src: badHabitsCard, type: 'image' },
-    { src: oasisMock, type: 'image' },
-    { src: sidelineBanterCover, type: 'image' },
-    { src: sidelineBanterApp, type: 'image' },
-    { src: philanthropyStickers, type: 'image' },
-    { src: philTshirt, type: 'image' },
-
-    // Soft Spa Style Sheets
-    { src: softSpaStyleSheet1, type: 'image' },
-    { src: softSpaStyleSheet2, type: 'image' },
-    { src: softSpaStyleSheet3, type: 'image' },
+    { src: cubeAnimation, type: 'video' },
+    { src: alienObjectAnimation, type: 'video' },
+    { src: triangleHallwayAnimation, type: 'video' },
+    { src: cubeAnimation, type: 'video' },
+    { src: alienObjectAnimation, type: 'video' },
+    { src: triangleHallwayAnimation, type: 'video' },
+    { src: cubeAnimation, type: 'video' },
+    { src: alienObjectAnimation, type: 'video' },
+    { src: triangleHallwayAnimation, type: 'video' },
+    { src: cubeAnimation, type: 'video' },
+    { src: alienObjectAnimation, type: 'video' },
+    { src: triangleHallwayAnimation, type: 'video' },
 ];
 
