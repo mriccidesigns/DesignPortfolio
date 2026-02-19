@@ -1,20 +1,28 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useMemo } from 'react';
 import { masonryAssets } from '../data/projects';
 import styles from './MasonryBackground.module.css';
 
 const MasonryBackground = () => {
     const trackRefs = useRef([]);
 
-    // Distribute assets across 4 rows
-    const distributeToRows = (assets, numRows = 4) => {
-        const rows = Array.from({ length: numRows }, () => []);
-        assets.forEach((asset, index) => {
-            rows[index % numRows].push(asset);
-        });
-        return rows;
+    // Shuffle array with a seed for consistent but random-looking distribution
+    const shuffleArray = (arr, seed = 42) => {
+        const shuffled = [...arr];
+        let s = seed;
+        for (let i = shuffled.length - 1; i > 0; i--) {
+            s = (s * 16807 + 0) % 2147483647;
+            const j = s % (i + 1);
+            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+        }
+        return shuffled;
     };
 
-    const rows = distributeToRows(masonryAssets);
+    // Create 4 rows with uniquely shuffled copies of all assets
+    const rows = useMemo(() => {
+        return [0, 1, 2, 3].map((rowIndex) => {
+            return shuffleArray(masonryAssets, 42 + rowIndex * 17);
+        });
+    }, []);
 
     useEffect(() => {
         const speed = 0.25; // pixels per frame (slower for subtlety)
