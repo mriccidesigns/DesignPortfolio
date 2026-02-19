@@ -18,16 +18,18 @@ const Navbar = () => {
         setIsMenuOpen(false);
     };
 
-    const isHomeActive = location.pathname === '/' || location.pathname === '';
+    const isHomeActive = location.pathname === '/' || location.pathname === '' || location.pathname === '/DesignPortfolio/' || location.pathname === '/DesignPortfolio';
     const isWorkActive = location.pathname.startsWith('/project') ||
         location.pathname === '/3d-projects' ||
         location.pathname === '/packaging' ||
         location.pathname === '/digital-marketing';
 
+    const isHomePath = location.pathname === '/' || location.pathname === '' || location.pathname === '/DesignPortfolio/' || location.pathname === '/DesignPortfolio';
+
     const handleHomeClick = (e) => {
         e.preventDefault();
         closeMenu();
-        if (location.pathname === '/' || location.pathname === '') {
+        if (isHomePath) {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         } else {
             navigate('/');
@@ -40,17 +42,17 @@ const Navbar = () => {
     const handleWorkClick = (e) => {
         e.preventDefault();
         closeMenu();
-        if (location.pathname === '/' || location.pathname === '') {
+        if (isHomePath) {
             const section = document.getElementById('3d-section');
             if (section) {
-                section.scrollIntoView({ behavior: 'smooth' });
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         } else {
             navigate('/');
             setTimeout(() => {
                 const section = document.getElementById('3d-section');
                 if (section) {
-                    section.scrollIntoView({ behavior: 'smooth' });
+                    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             }, 100);
         }

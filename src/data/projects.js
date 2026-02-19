@@ -152,10 +152,7 @@ export const masonryAssets = [
     { src: abandonedLake, type: 'image' },
     { src: superflapper, type: 'image' },
     { src: superflapperKit, type: 'image' },
-    { src: alienObjectHero, type: 'image' },
-    { src: cubeHero, type: 'image' },
     { src: swordHero, type: 'image' },
-    { src: triangleHallway, type: 'image' },
 
     // Images - Digital/Branding
     { src: brunoParadigmEdited, type: 'image' },
