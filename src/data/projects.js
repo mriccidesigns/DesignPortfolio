@@ -154,12 +154,6 @@ export const masonryAssets = [
     { src: superflapperKit, type: 'image' },
     { src: swordHero, type: 'image' },
 
-    // Soft Spa Box Renders
-    { src: softSpaFabric1, type: 'image' },
-    { src: softSpaFabric2, type: 'image' },
-    { src: softSpaFabric3, type: 'image' },
-    { src: softSpaFabric4, type: 'image' },
-
     // Images - Digital/Branding
     { src: brunoParadigmEdited, type: 'image' },
     { src: badHabitsCard, type: 'image' },
@@ -169,6 +163,12 @@ export const masonryAssets = [
     { src: philanthropyStickers, type: 'image' },
 ];
 
-// Triangle hallway only appears in one row
-export const masonrySingleRowAsset = { src: triangleHallwayAnimation, type: 'video' };
+// Assets pinned to specific rows (one per row) to prevent clustering
+// [row0, row1, row2, row3]
+export const masonryRowAssets = [
+    { src: softSpaFabric1, type: 'image' },      // row 0
+    { src: softSpaFabric2, type: 'image' },      // row 1
+    { src: triangleHallwayAnimation, type: 'video' }, // row 2
+    { src: softSpaFabric3, type: 'image' },      // row 3
+];
 
