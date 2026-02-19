@@ -140,12 +140,11 @@ export const projects = [
 
 // Masonry Background Assets
 // Easy to update: just add/remove items from this array
-// Mix of images and videos for dynamic background effect
+// Main masonry assets (distributed across all rows)
 export const masonryAssets = [
     // 3D Animation Videos
     { src: cubeAnimation, type: 'video' },
     { src: alienObjectAnimation, type: 'video' },
-    { src: triangleHallwayAnimation, type: 'video' },
 
     // Images - 3D Work
     { src: softSpaBidet, type: 'image' },
@@ -162,10 +161,8 @@ export const masonryAssets = [
     { src: sidelineBanterApp, type: 'image' },
     { src: philanthropyStickers, type: 'image' },
     { src: philTshirt, type: 'image' },
-
-    // Soft Spa Style Sheets
-    { src: softSpaStyleSheet1, type: 'image' },
-    { src: softSpaStyleSheet2, type: 'image' },
-    { src: softSpaStyleSheet3, type: 'image' },
 ];
+
+// Triangle hallway only appears in one row
+export const masonrySingleRowAsset = { src: triangleHallwayAnimation, type: 'video' };
 

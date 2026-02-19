@@ -1,5 +1,5 @@
 import { useEffect, useRef, useMemo } from 'react';
-import { masonryAssets } from '../data/projects';
+import { masonryAssets, masonrySingleRowAsset } from '../data/projects';
 import styles from './MasonryBackground.module.css';
 
 const MasonryBackground = () => {
@@ -18,9 +18,16 @@ const MasonryBackground = () => {
     };
 
     // Create 4 rows with uniquely shuffled copies of all assets
+    // Triangle hallway only goes in row 2
     const rows = useMemo(() => {
         return [0, 1, 2, 3].map((rowIndex) => {
-            return shuffleArray(masonryAssets, 42 + rowIndex * 17);
+            const shuffled = shuffleArray(masonryAssets, 42 + rowIndex * 17);
+            if (rowIndex === 1) {
+                // Insert triangle hallway into the middle of row 2 only
+                const mid = Math.floor(shuffled.length / 2);
+                shuffled.splice(mid, 0, masonrySingleRowAsset);
+            }
+            return shuffled;
         });
     }, []);
 

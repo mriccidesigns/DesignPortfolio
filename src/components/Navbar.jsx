@@ -61,15 +61,15 @@ const Navbar = () => {
     return (
         <nav className={styles.navbar}>
             <div className={styles.container}>
-                <a href="/" className={styles.logo} onClick={handleHomeClick}>
+                <a href="#" className={styles.logo} onClick={handleHomeClick}>
                     <img src={logo} alt="Matthew Ricci Logo" className={styles.brandLogo} />
                 </a>
 
                 <div className={`${styles.navLinks} ${isMenuOpen ? styles.active : ''}`}>
-                    <a href="/" className={isHomeActive ? styles.activeLink : styles.link} onClick={handleHomeClick}>
+                    <a href="#" className={isHomeActive ? styles.activeLink : styles.link} onClick={handleHomeClick}>
                         Home
                     </a>
-                    <a href="#3d-section" className={isWorkActive ? styles.activeLink : styles.link} onClick={handleWorkClick}>
+                    <a href="#" className={isWorkActive ? styles.activeLink : styles.link} onClick={handleWorkClick}>
                         Work
                     </a>
                     <NavLink to="/about" className={({ isActive }) => isActive ? styles.activeLink : styles.link} onClick={closeMenu}>
