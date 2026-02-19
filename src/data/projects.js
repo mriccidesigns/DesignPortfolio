@@ -30,6 +30,7 @@ import swordRender3 from '../assets/projects/3d/sword-in-stone/render-3.png';
 import triangleHallway from '../assets/projects/3d/triangle-hallway/TriangleHall.jpg';
 import cubeAnimation from '../assets/projects/3d/cube/Cube_Animation.mp4';
 import alienObjectAnimation from '../assets/projects/3d/alien-object/Alien_Object.mp4';
+import triangleHallwayAnimation from '../assets/projects/3d/triangle-hallway/TriangleHall.mp4';
 
 // Bad Habits Wine images
 import badHabitsMock from '../assets/projects/digital/Bad_Habits_BrandBook.jpg';
@@ -143,15 +144,15 @@ export const projects = [
 export const masonryAssets = [
     { src: cubeAnimation, type: 'video' },
     { src: alienObjectAnimation, type: 'video' },
+    { src: triangleHallwayAnimation, type: 'video' },
     { src: cubeAnimation, type: 'video' },
     { src: alienObjectAnimation, type: 'video' },
+    { src: triangleHallwayAnimation, type: 'video' },
     { src: cubeAnimation, type: 'video' },
     { src: alienObjectAnimation, type: 'video' },
+    { src: triangleHallwayAnimation, type: 'video' },
     { src: cubeAnimation, type: 'video' },
     { src: alienObjectAnimation, type: 'video' },
-    { src: cubeAnimation, type: 'video' },
-    { src: alienObjectAnimation, type: 'video' },
-    { src: cubeAnimation, type: 'video' },
-    { src: alienObjectAnimation, type: 'video' },
+    { src: triangleHallwayAnimation, type: 'video' },
 ];
 
