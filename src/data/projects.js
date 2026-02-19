@@ -142,17 +142,33 @@ export const projects = [
 // Easy to update: just add/remove items from this array
 // Mix of images and videos for dynamic background effect
 export const masonryAssets = [
+    // 3D Animation Videos
     { src: cubeAnimation, type: 'video' },
     { src: alienObjectAnimation, type: 'video' },
     { src: triangleHallwayAnimation, type: 'video' },
-    { src: cubeAnimation, type: 'video' },
-    { src: alienObjectAnimation, type: 'video' },
-    { src: triangleHallwayAnimation, type: 'video' },
-    { src: cubeAnimation, type: 'video' },
-    { src: alienObjectAnimation, type: 'video' },
-    { src: triangleHallwayAnimation, type: 'video' },
-    { src: cubeAnimation, type: 'video' },
-    { src: alienObjectAnimation, type: 'video' },
-    { src: triangleHallwayAnimation, type: 'video' },
+
+    // Images - 3D Work
+    { src: softSpaBidet, type: 'image' },
+    { src: abandonedLake, type: 'image' },
+    { src: superflapper, type: 'image' },
+    { src: superflapperKit, type: 'image' },
+    { src: alienObjectHero, type: 'image' },
+    { src: cubeHero, type: 'image' },
+    { src: swordHero, type: 'image' },
+    { src: triangleHallway, type: 'image' },
+
+    // Images - Digital/Branding
+    { src: brunoParadigmEdited, type: 'image' },
+    { src: badHabitsCard, type: 'image' },
+    { src: oasisMock, type: 'image' },
+    { src: sidelineBanterCover, type: 'image' },
+    { src: sidelineBanterApp, type: 'image' },
+    { src: philanthropyStickers, type: 'image' },
+    { src: philTshirt, type: 'image' },
+
+    // Soft Spa Style Sheets
+    { src: softSpaStyleSheet1, type: 'image' },
+    { src: softSpaStyleSheet2, type: 'image' },
+    { src: softSpaStyleSheet3, type: 'image' },
 ];
 
