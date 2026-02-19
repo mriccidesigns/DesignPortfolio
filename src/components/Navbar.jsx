@@ -2,7 +2,7 @@ import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import styles from './Navbar.module.css';
 import { SiLinkedin, SiArtstation, SiInstagram } from "react-icons/si";
-import logo from '../assets/mr-logo.jpg';
+import logo from '../assets/MR_Logo_2.png';
 import resumePdf from '../assets/Matthew-Ricci-Resume-2026.pdf';
 
 const Navbar = () => {
