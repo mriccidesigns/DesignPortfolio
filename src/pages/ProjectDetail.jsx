@@ -30,8 +30,8 @@ const ProjectDetail = () => {
 
                 <div className={styles.heroSection}>
                     <div className={styles.heroImageWrapper}>
-                        {project.heroVideo || project.previewVideo ? (
-                            <video src={project.heroVideo || project.previewVideo} autoPlay muted loop playsInline className={styles.heroImage} />
+                        {project.heroVideo ? (
+                            <video src={project.heroVideo} autoPlay muted loop playsInline className={styles.heroImage} />
                         ) : Array.isArray(project.heroImage) ? (
                             <div style={{ display: 'flex', flexDirection: 'row', width: '100%', height: '100%', gap: 'var(--spacing-xs)' }}>
                                 {project.heroImage.map((img, idx) => (
