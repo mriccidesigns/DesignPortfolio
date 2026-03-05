@@ -21,9 +21,9 @@ import badHabitsCard from '../assets/projects/digital/Bad Habits Card.jpg';
 
 // Soft Spa images
 import softSpaBidet from '../assets/projects/3d/soft-spa-bidet.jpg';
-import softSpaStyleSheet1 from '../assets/projects/digital/SoftSpa-StyleSheet-1-01.png';
+import softSpaStyleSheet1 from '../assets/projects/digital/SoftSpa-StyleSheet-1-01.jpg';
 import softSpaStyleSheet2 from '../assets/projects/digital/SoftSpa-StyleSheet-1-02.png';
-import softSpaStyleSheet3 from '../assets/projects/digital/SoftSpa-StyleSheet-1-03.png';
+import softSpaStyleSheet3 from '../assets/projects/digital/SoftSpa-StyleSheet-1-03.jpg';
 import softSpaVelvet8 from '../assets/projects/3d/SoftSpa_Velvet-8.jpg';
 import softSpaFabric2 from '../assets/projects/3d/SoftSpa_Ani_IS0597.jpg';
 import softSpaFabric3 from '../assets/projects/3d/SoftSpa_Ani_IS0864.jpg';

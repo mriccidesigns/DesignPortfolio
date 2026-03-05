@@ -1,12 +1,10 @@
 import styles from './Hero.module.css';
 import MasonryBackground from './MasonryBackground';
+import { smoothScrollTo } from '../utils/scroll';
 
 const Hero = () => {
     const scrollToSection = (sectionId) => {
-        const element = document.getElementById(sectionId);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+        smoothScrollTo(sectionId);
     };
 
     return (

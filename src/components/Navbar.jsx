@@ -4,6 +4,7 @@ import styles from './Navbar.module.css';
 import { SiLinkedin, SiArtstation, SiInstagram } from "react-icons/si";
 import logo from '../assets/MR_Logo_4.png';
 import resumePdf from '../assets/Matthew-Ricci-Resume-2026.pdf';
+import { smoothScrollTo } from '../utils/scroll';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,11 +31,11 @@ const Navbar = () => {
         e.preventDefault();
         closeMenu();
         if (isHomePath) {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            window.scrollTo({ top: 0, behavior: 'auto' });
         } else {
             navigate('/');
             setTimeout(() => {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                window.scrollTo({ top: 0, behavior: 'auto' });
             }, 50);
         }
     };
@@ -43,17 +44,11 @@ const Navbar = () => {
         e.preventDefault();
         closeMenu();
         if (isHomePath) {
-            const section = document.getElementById('3d-section');
-            if (section) {
-                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
+            smoothScrollTo('3d-section');
         } else {
             navigate('/');
             setTimeout(() => {
-                const section = document.getElementById('3d-section');
-                if (section) {
-                    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
+                smoothScrollTo('3d-section');
             }, 100);
         }
     };

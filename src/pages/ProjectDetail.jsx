@@ -225,7 +225,13 @@ const ProjectDetail = () => {
                     </div>
                 </div>
             )}
-        </div>
+
+            <div className={styles.bottomBackBtnContainer}>
+                <Link to="/" className={styles.backLink}>
+                    &larr; Back to Projects
+                </Link>
+            </div>
+        </div >
     );
 };
 

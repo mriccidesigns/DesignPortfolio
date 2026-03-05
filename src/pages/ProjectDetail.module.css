@@ -52,6 +52,13 @@
     background-color: rgba(0, 71, 171, 0.05);
 }
 
+.bottomBackBtnContainer {
+    display: flex;
+    justify-content: center;
+    padding: var(--spacing-xl) 0;
+    width: 100%;
+}
+
 .contentGrid {
     display: grid;
     grid-template-columns: 1fr;
