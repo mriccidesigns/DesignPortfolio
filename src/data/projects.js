@@ -1,6 +1,6 @@
 // Project images - using real user-provided assets
 import softSpaVideo from '../assets/projects/3d/SoftSpa_Unboxing_2.mp4';
-import superflapperVideo from '../assets/projects/3d/FM_SuperFlapper_Explode_16-9.mp4';
+import superflapperVideo from '../assets/projects/3d/FM_SuperFlapper_Explode_16-9_CMP.mp4';
 import abandonedLake from '../assets/projects/3d/Abandoned Lake-1_Edit.jpg';
 import superflapper from '../assets/projects/packaging/SuperFlapper_PlasticUpdate_090924.jpg';
 import superflapperKit from '../assets/projects/packaging/SuperFlapperKit_PlasticUpdate_090924.jpg';
@@ -44,8 +44,8 @@ import swordRender1 from '../assets/projects/3d/sword-in-stone/render-1.png';
 import swordRender2 from '../assets/projects/3d/sword-in-stone/render-2.png';
 import swordRender3 from '../assets/projects/3d/sword-in-stone/render-3.png';
 import triangleHallway from '../assets/projects/3d/triangle-hallway/TriangleHall.jpg';
-import cubeAnimation from '../assets/projects/3d/cube/Cube_Animation.mp4';
-import alienObjectAnimation from '../assets/projects/3d/alien-object/Alien_Object.mp4';
+import cubeAnimation from '../assets/projects/3d/cube/Cube_Animation_CMP.mp4';
+import alienObjectAnimation from '../assets/projects/3d/alien-object/Alien_Object_CMP.mp4';
 import triangleHallwayAnimation from '../assets/projects/3d/triangle-hallway/TriangleHall.mp4';
 
 // Bad Habits Wine images
