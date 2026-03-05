@@ -1,0 +1,34 @@
+.scrollWrapper {
+    position: relative;
+    width: 100%;
+}
+
+.stickyContainer {
+    position: sticky;
+    top: 15vh;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    max-width: 70vh;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+}
+
+.imageLayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Hardware acceleration for smooth clipping */
+    transform: translateZ(0);
+    will-change: clip-path;
+}
+
+.peelImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}

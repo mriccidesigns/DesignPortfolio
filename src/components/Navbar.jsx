@@ -45,16 +45,14 @@ const Navbar = () => {
         if (isHomePath) {
             const section = document.getElementById('3d-section');
             if (section) {
-                const y = section.getBoundingClientRect().top + window.pageYOffset;
-                window.scrollTo({ top: y, behavior: 'smooth' });
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         } else {
             navigate('/');
             setTimeout(() => {
                 const section = document.getElementById('3d-section');
                 if (section) {
-                    const y = section.getBoundingClientRect().top + window.pageYOffset;
-                    window.scrollTo({ top: y, behavior: 'smooth' });
+                    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             }, 100);
         }
