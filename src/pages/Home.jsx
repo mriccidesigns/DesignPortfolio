@@ -18,7 +18,7 @@ const Home = () => {
             <section className={styles.projectsShowcase}>
                 {/* 3D Section */}
                 <div id="3d-section" className={styles.categoryDivider}>
-                    <h2>3D Visualization</h2>
+                    <h2>3D Design</h2>
                 </div>
                 {threeDProjects.map((project, index) => (
                     <div key={project.id} className={`${styles.projectRow} ${index % 2 !== 0 ? styles.reversed : ''}`}>

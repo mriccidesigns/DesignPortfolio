@@ -2,8 +2,16 @@ export const smoothScrollTo = (targetId) => {
     const target = document.getElementById(targetId);
     if (!target) return;
 
-    // Get position of the target relative to the document
-    const targetPosition = target.getBoundingClientRect().top + window.scrollY;
+    // Read the actual navbar height dynamically so we don't hardcode it
+    const navbar = document.querySelector('nav') || document.querySelector('header');
+    const navbarHeight = navbar ? navbar.offsetHeight : 60;
+
+    // Extra breathing room so the section title isn't flush against the navbar
+    const offset = navbarHeight + 16;
+
+    // Get position of the target relative to the document, minus the navbar offset
+    const targetPosition = target.getBoundingClientRect().top + window.scrollY - offset;
+
 
     // Current scroll position
     const startPosition = window.scrollY;

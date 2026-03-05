@@ -26,7 +26,7 @@ const Hero = () => {
                         PACKAGING DESIGN
                     </button>
                     <button onClick={() => scrollToSection('3d-section')} className={styles.categoryBtn}>
-                        3D VISUALIZATION
+                        3D DESIGN
                     </button>
                 </div>
             </div>
