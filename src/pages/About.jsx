@@ -48,11 +48,14 @@ const About = () => {
 
                     <div className={styles.bio}>
                         <p>
-                            I am a detail-oriented Senior In-House Graphic Designer and 3D artist with a proven track record of delivering impactful design solutions across diverse departments.
-                            My approach combines technical precision with a deep understanding of corporate brand management and internal communications.
+                            Senior Graphic Designer and 3D Artist with 6+ years of end-to-end experience from brand identity to
+                            shelf-ready packaging visualization. Skilled at leading and mentoring design teams, managing projects, and
+                            collaborating cross-functionally with marketing, product, and vendor teams to keep creative aligned with
+                            business goals.
                         </p>
                         <p>
-                            With years of experience working within corporate environments, I specialize in streamlining design workflows and maintaining absolute brand consistency while pushing the boundaries of visual storytelling.
+                            Expert in Blender, Adobe Creative Suite, and Figma, with a specialization in 3D product
+                            rendering and packaging design for consumer product brands.
                         </p>
                     </div>
 
