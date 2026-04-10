@@ -3,7 +3,7 @@ import { useState } from 'react';
 import styles from './Navbar.module.css';
 import { SiLinkedin, SiArtstation, SiInstagram } from "react-icons/si";
 import logo from '../assets/MR_Logo_4.png';
-import resumePdf from '../assets/Matthew-Ricci-Resume-2026.pdf';
+import resumePdf from '../assets/Matthew Ricci Resume_2026.pdf';
 import { smoothScrollTo } from '../utils/scroll';
 
 const Navbar = () => {
