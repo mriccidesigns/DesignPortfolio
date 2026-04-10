@@ -48,10 +48,10 @@ const About = () => {
 
                     <div className={styles.bio}>
                         <p>
-                            Senior Graphic Designer and 3D Artist with 6+ years of end-to-end experience from brand identity to
-                            shelf-ready packaging visualization. Skilled at leading and mentoring design teams, managing projects, and
-                            collaborating cross-functionally with marketing, product, and vendor teams to keep creative aligned with
-                            business goals.
+                            Senior Graphic Designer and 3D Artist with 6+ years of end-to-end experience from brand identity 
+                            to shelf-ready packaging visualization. Skilled at leading and mentoring design teams, managing projects, 
+                            and collaborating cross-functionally with marketing, product, and vendor teams to ensure all creative output 
+                            aligns with business goals.
                         </p>
                         <p>
                             Expert in Blender, Adobe Creative Suite, and Figma, with a specialization in 3D product
